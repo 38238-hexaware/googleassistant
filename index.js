@@ -123,7 +123,7 @@ app1.ask(app1.buildRichResponse()
     // Create a basic card and add it to the rich response
 
     .addSimpleResponse('Math and prime numbers it is!')
-    .addBasicCard(app1.buildBasicCard(`<b> ${sourcecarrier} => ${destcarrier} </b>\n\n\n<b>Departure:</b> \n\n${datedep}\n\n${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}
+    .addBasicCard(app1.buildBasicCard(`<center><b> ${sourcecarrier} => ${destcarrier} </b></center>\n\n\n<b>Departure:</b> \n\n${datedep}\n\n${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}
 \n\n\n <b>Arrival:</b> \n\n${scheduleda.substring(0, scheduleda.length-4)} \n\n<i>Est:</i>\n${estimateda.substring(0, estimateda.length-4)}`)
       .setTitle('Flight Status')
       .setImage('https://lh3.googleusercontent.com/K7IBRJz-E1h4gR0wfpcCzwf1MVxV8LXHpqFfKctPdiC54e9GUNTqC_vi_Mhe4KWcB5XnT2ku=w50-h50-e365')
