@@ -118,16 +118,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
 //     )
 //   );
  //=====================================================
- app1.ask(app1.buildRichResponse()
-    // Create a basic card and add it to the rich response
 
-    .addSimpleResponse(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`)
-    .addBasicCard(app1.buildBasicCard(`<center><b> ${sourcecarrier} => ${destcarrier} </b></center><table style="width:100%"><tr><td align="left"><b>Departure:</b> \n\n<b>${datedep}</b>\n${scheduledd.substring(0, scheduledd.length-4)}<br/><i>Est:</i>${estimatedd.substring(0, estimatedd.length-4)}</td><td><img src="https://www.dropbox.com/s/l1h4x5r6ox5f60q/rsz_departure.png?raw=1"/></td></tr><tr><td colspan="2"  align="center">${airports}</td></tr></table>
-\n<b>Arrival:</b><table width="100%"><tr><td align="left"><b>${datearr}</b><br/>${scheduleda.substring(0, scheduleda.length-4)} <br/><i>Est:</i>${estimateda.substring(0, estimateda.length-4)}</td><td><img src="https://www.dropbox.com/s/mcw8pgxq5akdn0v/rsz_arrival.png?raw=1"/></td></tr><tr><td colspan="2"  align="center">${airportd}</td></tr></table>`)
-      .setTitle('Flight Status')
-      .setImage('https://www.dropbox.com/s/g7avz78npsqcm2n/flight647x404_101116021054.jpg?raw=1')
-    )
-  );
 
 
                      
