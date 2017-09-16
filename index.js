@@ -124,7 +124,7 @@ app1.ask(app1.buildRichResponse()
 
     .addSimpleResponse('Math and prime numbers it is!')
     .addBasicCard(app1.buildBasicCard(`<center><b> ${sourcecarrier} => ${destcarrier} </b></center>\n\n\n<b>Departure:</b> \n\n${datedep}\n\n${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}
-\n\n\n <b>Arrival:</b> \n\n<table style="width:100%"><tr><td>${scheduleda.substring(0, scheduleda.length-4)} \n\n<i>Est:</i>\n${estimateda.substring(0, estimateda.length-4)}</td><td><img src="http://www.clker.com/cliparts/B/2/l/0/b/k/arrivals-airport-sign-th.png"/></td></tr></table>`)
+\n\n\n <b>Arrival:</b> \n\n<table style="width:100%"><tr><td>${scheduleda.substring(0, scheduleda.length-4)} \n\n<i>Est:</i>\n${estimateda.substring(0, estimateda.length-4)}</td><td><img src="https://drive.google.com/file/d/0B6eOn0z2jt_jc2FkUEJnNmtSZzg/view"/></td></tr></table>`)
       .setTitle('Flight Status')
       .setImage('https://lh3.googleusercontent.com/K7IBRJz-E1h4gR0wfpcCzwf1MVxV8LXHpqFfKctPdiC54e9GUNTqC_vi_Mhe4KWcB5XnT2ku=w50-h50-e365')
     )
