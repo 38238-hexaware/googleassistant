@@ -123,8 +123,8 @@ app1.ask(app1.buildRichResponse()
     // Create a basic card and add it to the rich response
 
     .addSimpleResponse('Math and prime numbers it is!')
-    .addBasicCard(app1.buildBasicCard(`<center><b> ${sourcecarrier} => ${destcarrier} </b></center><table style="width:100%"><tr><td align="left"><b>Departure:</b> \n\n${datedep}\n${scheduledd.substring(0, scheduledd.length-4)}<br/><i>Est:</i>${estimatedd.substring(0, estimatedd.length-4)}</td><td><img src="https://www.dropbox.com/s/l1h4x5r6ox5f60q/rsz_departure.png?raw=1"/></td></table>
-<p align="center">${airports}<p>\n<b>Arrival:</b><table width="100%"><tr><td align="left">${scheduleda.substring(0, scheduleda.length-4)} <br/><i>Est:</i>${estimateda.substring(0, estimateda.length-4)}</td><td><img src="https://www.dropbox.com/s/mcw8pgxq5akdn0v/rsz_arrival.png?raw=1"/></td></tr></table><p  align="center">${airportd}<p>`)
+    .addBasicCard(app1.buildBasicCard(`<center><b> ${sourcecarrier} => ${destcarrier} </b></center><table style="width:100%"><tr><td align="left"><b>Departure:</b> \n\n${datedep}\n${scheduledd.substring(0, scheduledd.length-4)}<br/><i>Est:</i>${estimatedd.substring(0, estimatedd.length-4)}</td><td><img src="https://www.dropbox.com/s/l1h4x5r6ox5f60q/rsz_departure.png?raw=1"/></td></tr><tr><td colspan="2"><p align="center">${airports}<p></td></tr></table>
+\n<b>Arrival:</b><table width="100%"><tr><td align="left">${scheduleda.substring(0, scheduleda.length-4)} <br/><i>Est:</i>${estimateda.substring(0, estimateda.length-4)}</td><td><img src="https://www.dropbox.com/s/mcw8pgxq5akdn0v/rsz_arrival.png?raw=1"/></td></tr><tr><td colspan="2"><p align="center">${airportd}<p></td></tr></table>`)
       .setTitle('Flight Status')
       .setImage('https://lh3.googleusercontent.com/K7IBRJz-E1h4gR0wfpcCzwf1MVxV8LXHpqFfKctPdiC54e9GUNTqC_vi_Mhe4KWcB5XnT2ku=w50-h50-e365')
     )
