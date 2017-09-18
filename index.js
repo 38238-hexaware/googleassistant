@@ -112,8 +112,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
       .setTitle('Math & prime numbers')
       .addButton('Read more', 'https://example.google.com/mathandprimes')
       .setImage('https://example.google.com/42.png', 'Image alternate text')
-    )
-  ),
+    ),
       app1.buildList('Flight Status')
 
     // Add the first item to the list
