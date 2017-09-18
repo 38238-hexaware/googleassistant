@@ -98,28 +98,36 @@ function callApi(req, res) {
 var myKeys = Object.keys(flightstatus) 
 newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
                                 //app1.ask(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd} , Arrival ${estimateda}. Schedule Departure ${scheduledd} , Arrival ${scheduleda}. Do u want to know anything else?`);
-                 
-//===========================================                                
-  app1.askWithList(app1.buildRichResponse()
-    .addSimpleResponse({displayText:'Do you want to know anything else?',speech:`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`})
-                   
-    .addSuggestions(['Yes', 'No']),
-    app1.buildList('Flight Status')
-    // Add the first item to the list
-    .addItems(app1.buildOptionItem('option2')
-      .setTitle(`D ${datedep}`)
-      .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:${estimatedd.substring(0, estimatedd.length-4)}`)
-       .setImage('https://www.dropbox.com/s/l1h4x5r6ox5f60q/rsz_departure.png?raw=1', 'Departure')
-      )
-    // Add the second item to the list
-    .addItems(app1.buildOptionItem('option1')
-      .setTitle(`A ${datearr}`)
-      .setDescription(`${scheduleda.substring(0, scheduleda.length-4)}\n\nEst:${estimateda.substring(0, estimateda.length-4)}`)
-      .setImage('https://www.dropbox.com/s/mcw8pgxq5akdn0v/rsz_arrival.png?raw=1', 'Arrival')
-    ).addItems(app1.buildOptionItem('option3').setTitle(`${sourcecarrier} => ${destcarrier}`)
-      .setDescription(`${airports} - ${airportd}`)
+    app1.ask(app1.buildRichResponse()
+    // Create a basic card and add it to the rich response
+
+    .addSimpleResponse('Do you need anything else?')
+    .addBasicCard(app1.buildBasicCard(`**Departure:** \n\n${datedep}\n\n${scheduledd.substring(0, scheduledd.length-4)}\n *Est:* ${estimatedd.substring(0, estimatedd.length-4)} \n\n ${airports} **Arrival:** n${datearr}\n\n${scheduleda.substring(0, scheduleda.length-4)}\n *Est:* ${estimateda.substring(0, estimateda.length-4)}\n\n${airportd}`)
+      .setTitle(`Flight Status ${sourcecarrier} => ${destcarrier}`)
+      .setImage('https://www.dropbox.com/s/g7avz78npsqcm2n/flight647x404_101116021054.jpg?raw=1', 'Image alternate text')
     )
-  );
+  );              
+//===========================================                                
+//   app1.askWithList(app1.buildRichResponse()
+//     .addSimpleResponse({displayText:'Do you want to know anything else?',speech:`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`})
+                   
+//     .addSuggestions(['Yes', 'No']),
+//     app1.buildList('Flight Status')
+//     // Add the first item to the list
+//     .addItems(app1.buildOptionItem('option2')
+//       .setTitle(`D ${datedep}`)
+//       .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:${estimatedd.substring(0, estimatedd.length-4)}`)
+//        .setImage('https://www.dropbox.com/s/l1h4x5r6ox5f60q/rsz_departure.png?raw=1', 'Departure')
+//       )
+//     // Add the second item to the list
+//     .addItems(app1.buildOptionItem('option1')
+//       .setTitle(`A ${datearr}`)
+//       .setDescription(`${scheduleda.substring(0, scheduleda.length-4)}\n\nEst:${estimateda.substring(0, estimateda.length-4)}`)
+//       .setImage('https://www.dropbox.com/s/mcw8pgxq5akdn0v/rsz_arrival.png?raw=1', 'Arrival')
+//     ).addItems(app1.buildOptionItem('option3').setTitle(`${sourcecarrier} => ${destcarrier}`)
+//       .setDescription(`${airports} - ${airportd}`)
+//     )
+//   );
  //=====================================================
 
 //  app1.ask(app1.buildRichResponse()
