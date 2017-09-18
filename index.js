@@ -106,7 +106,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
     .addItems(app1.buildOptionItem('option2')
       .setTitle(`${datedep}`)
       .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}`)
-       .setImage('<img src="https://www.dropbox.com/s/l1h4x5r6ox5f60q/rsz_departure.png?raw=1"/>', 'Departure',50,50)
+       .setImage('<img src="https://www.dropbox.com/s/l1h4x5r6ox5f60q/rsz_departure.png?raw=1"/>', 'Departure')
       )
     // Add the second item to the list
     .addItems(app1.buildOptionItem('option1')
