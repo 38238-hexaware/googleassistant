@@ -102,7 +102,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
     // Create a basic card and add it to the rich response
 
     .addSimpleResponse('Do you need anything else?')
-    .addBasicCard(app1.buildBasicCard(`**Departure:** \n\n${datedep}\n\n${scheduledd.substring(0, scheduledd.length-4)}\n *Est:* ${estimatedd.substring(0, estimatedd.length-4)} \n\n ${airports} **Arrival:** n${datearr}\n\n${scheduleda.substring(0, scheduleda.length-4)}\n *Est:* ${estimateda.substring(0, estimateda.length-4)}\n\n${airportd}`)
+    .addBasicCard(app1.buildBasicCard(`**Departure:** \n\n${datedep}\n\n${scheduledd.substring(0, scheduledd.length-4)}\n *Est:* ${estimatedd.substring(0, estimatedd.length-4)} \n\n ${airports} **Arrival:** \n\n${datearr}\n\n${scheduleda.substring(0, scheduleda.length-4)}\n *Est:* ${estimateda.substring(0, estimateda.length-4)}\n\n${airportd}`)
       .setTitle(`Flight Status ${sourcecarrier} => ${destcarrier}`)
       .setImage('https://www.dropbox.com/s/g7avz78npsqcm2n/flight647x404_101116021054.jpg?raw=1', 'Image alternate text')
     )
