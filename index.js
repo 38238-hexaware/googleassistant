@@ -104,7 +104,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
     .addSimpleResponse('Do you need anything else?')
     .addBasicCard(app1.buildBasicCard(`**Departure:** \n\n${datedep}\n\n${scheduledd.substring(0, scheduledd.length-4)}\n *Est:* ${estimatedd.substring(0, estimatedd.length-4)} \n\n ${airports} \n\n**Arrival:** \n\n${datearr}\n\n${scheduleda.substring(0, scheduleda.length-4)}\n *Est:* ${estimateda.substring(0, estimateda.length-4)}\n\n${airportd}`)
       .setTitle(`Flight Status ${sourcecarrier} => ${destcarrier}`)
-      .setImage('https://www.dropbox.com/s/g7avz78npsqcm2n/flight647x404_101116021054.jpg?raw=1', 'Image alternate text')
+      .setImage(`https://maps.googleapis.com/maps/api/staticmap?center=${latitude},${longitude}&zoom=10&size=200x200&maptype=roadmap&markers=anchor:topleft%7Cicon:https://www.dropbox.com/s/coom3cu3rdijeby/rsz_1rsz_airplane-512.png?raw=1%7C40.714728,-73.998672&key=AIzaSyCsB3zqvC5gR7LrAG7_kyiBkk17dQiFUes', 'Image alternate text`)
     )
   );              
 //===========================================                                
