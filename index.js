@@ -103,16 +103,7 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
   app1.askWithList(app1.buildRichResponse()
     .addSimpleResponse({displayText:'Do you want to know anything else?',speech:`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`})
                    
-    .addSuggestions(['Yes', 'No'])    .addBasicCard(app1.buildBasicCard(`42 is an even composite number. It 
-      is composed of three distinct prime numbers multiplied together. It 
-      has a total of eight divisors. 42 is an abundant number, because the 
-      sum of its proper divisors 54 is greater than itself. To count from 
-      1 to 42 would take you about twenty-one…`)
-      .setTitle('Math & prime numbers')
-      .addButton('Read more', 'https://example.google.com/mathandprimes')
-      .setImage('https://example.google.com/42.png', 'Image alternate text')
-    )
-,
+    .addSuggestions(['Yes', 'No']),
       app1.buildList('Flight Status')
 
     // Add the first item to the list
