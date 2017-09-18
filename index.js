@@ -103,8 +103,8 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
   app1.askWithList(app1.buildRichResponse()
     .addSimpleResponse(`Flight is ${newflightss} from ${airports} ${countrys} to ${airportd} ${countryd}. Estimated Departure ${estimatedd.substring(0, estimatedd.length-4)} , Arrival ${estimateda.substring(0, estimateda.length-4)}. Schedule Departure ${scheduledd.substring(0, scheduledd.length-4)} , Arrival ${scheduleda.substring(0, scheduleda.length-4)}. Do u want to know anything else?`)
     .addSuggestions(['Yes', 'No']),
-    app1.addBasicCard(app1.setImage('https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=10&size=200x200&maptype=roadmap&markers=anchor:topleft%7Cicon:https://www.dropbox.com/s/coom3cu3rdijeby/rsz_1rsz_airplane-512.png?raw=1%7C40.714728,-73.998672&key=AIzaSyCsB3zqvC5gR7LrAG7_kyiBkk17dQiFUes', 'Image alternate text')),
       app1.buildList('Flight Status')
+    .addItems(app1.buildOptionItem('option5').setImage(`https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=10&size=200x200&maptype=roadmap&markers=anchor:topleft%7Cicon:https://www.dropbox.com/s/coom3cu3rdijeby/rsz_1rsz_airplane-512.png?raw=1%7C40.714728,-73.998672&key=AIzaSyCsB3zqvC5gR7LrAG7_kyiBkk17dQiFUes`))                 
     // Add the first item to the list
     .addItems(app1.buildOptionItem('option2')
       .setTitle(`D ${datedep}`)
