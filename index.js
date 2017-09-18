@@ -105,13 +105,13 @@ newflightss=flightstatus[myKeys.indexOf(flightstatuses)!==-1?flightstatuses:""];
     // Add the first item to the list
     .addItems(app1.buildOptionItem('option2')
       .setTitle(`D ${datedep}`)
-      .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:\n${estimatedd.substring(0, estimatedd.length-4)}`)
+      .setDescription(`${scheduledd.substring(0, scheduledd.length-4)}\n\nEst:${estimatedd.substring(0, estimatedd.length-4)}`)
        .setImage('https://www.dropbox.com/s/l1h4x5r6ox5f60q/rsz_departure.png?raw=1', 'Departure')
       )
     // Add the second item to the list
     .addItems(app1.buildOptionItem('option1')
       .setTitle(`A ${datearr}`)
-      .setDescription(`${scheduleda.substring(0, scheduleda.length-4)}\n\nEst:\n${estimateda.substring(0, estimateda.length-4)}`)
+      .setDescription(`${scheduleda.substring(0, scheduleda.length-4)}\n\nEst:${estimateda.substring(0, estimateda.length-4)}`)
       .setImage('https://www.dropbox.com/s/mcw8pgxq5akdn0v/rsz_arrival.png?raw=1', 'Arrival')
     ).addItems(app1.buildOptionItem('option3').setTitle(`${sourcecarrier} => ${destcarrier}`)
       .setDescription(`${airports} - ${airportd}`)
